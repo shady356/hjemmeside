@@ -13,6 +13,7 @@ const photo2Style = computed(() => ({ zIndex: topPhoto.value === 2 ? 2 : 1 }))
 </script>
 
 <template>
+  <a href="#main-content" class="skip-link">Hopp til innhold</a>
   <header>
     <a href="#about" class="home-link-name">Henrik Oddløkken</a>
     <nav>
@@ -22,11 +23,11 @@ const photo2Style = computed(() => ({ zIndex: topPhoto.value === 2 ? 2 : 1 }))
       </ul>
     </nav>
   </header>
-  <main>
+  <main id="main-content">
     <div class="top-row">
-      <section class="ingress-section">
+      <section id="about" class="ingress-section">
         <h1>Jeg er Henrik, en UX-designer med teknisk bakgrunn</h1>
-        <p>Utdannet og erfaring i både Frontendutvikling og UX design.</p>
+        <p>Utdannet og erfaring i både UX design og Frontendutvikling.</p>
         <p>
           Jeg brenner for å lage løsninger som gir en god brukeropplevelse for alle — ikke bare de
           som bruker produktet slik det var tenkt. Universell utforming er ikke en sjekkliste for
@@ -34,7 +35,7 @@ const photo2Style = computed(() => ({ zIndex: topPhoto.value === 2 ? 2 : 1 }))
         </p>
       </section>
       <section class="photos">
-        <button aria-label="Bilde av meg" class="photo-button" @click="showNextPhoto()">
+        <button aria-label="Vis neste bilde av meg" class="photo-button" @click="showNextPhoto()">
           <img
             class="photos-1"
             :class="{ 'is-top': topPhoto === 1 }"
@@ -54,9 +55,53 @@ const photo2Style = computed(() => ({ zIndex: topPhoto.value === 2 ? 2 : 1 }))
     </div>
   </main>
   <Projects />
+  <section id="contact" class="contact-section">
+    <h2>Kontakt</h2>
+  </section>
 </template>
 
 <style scoped>
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #333;
+  font-weight: 600;
+  border: 2px solid #333;
+  border-radius: 4px;
+  z-index: 9999;
+  text-decoration: none;
+  overflow: visible;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #1c3201;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.contact-section {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem 3rem 4rem;
+  box-sizing: border-box;
+}
+
 header {
   width: 100%;
   display: flex;

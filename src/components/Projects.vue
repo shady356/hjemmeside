@@ -24,7 +24,7 @@ const projects = [
 </script>
 
 <template>
-  <section class="projects-section">
+  <section id="projects" class="projects-section">
     <h2>Mine Prosjekter</h2>
     <div class="cards-grid">
       <ProjectCard
