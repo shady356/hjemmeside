@@ -5,7 +5,7 @@ defineProps<{
   color: string
   foreground: string
   image: string
-  url: URL
+  url: string
 }>()
 </script>
 
