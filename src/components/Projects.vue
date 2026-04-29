@@ -10,7 +10,7 @@ const projects = [
     color: '#E2EDD6',
     foreground: '#1C3201',
     image: abstractPianoArt,
-    url: new URL('https://shady356.github.io/simple-piano/'),
+    url: 'https://shady356.github.io/simple-piano/',
   },
   {
     title: 'PokeView',
@@ -18,7 +18,7 @@ const projects = [
     color: '#F6FBFF',
     foreground: '#02264A',
     image: pokeview,
-    url: new URL('https://shady356.github.io/pokedex/'),
+    url: 'https://shady356.github.io/pokedex/',
   },
 ]
 </script>
