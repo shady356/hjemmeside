@@ -8,13 +8,15 @@ const projects = [
     title: 'Enkelt piano',
     description: 'Spill piano i nettlesern',
     color: '#E2EDD6',
+    foreground: '#1C3201',
     image: abstractPianoArt,
     url: new URL('https://shady356.github.io/simple-piano/'),
   },
   {
     title: 'PokeView',
     description: 'Utforsk Pokémon-verdenen',
-    color: '#D6EFEF',
+    color: '#F6FBFF',
+    foreground: '#02264A',
     image: pokeview,
     url: new URL('https://shady356.github.io/pokedex/'),
   },
@@ -31,6 +33,7 @@ const projects = [
         :title="project.title"
         :description="project.description"
         :color="project.color"
+        :foreground="project.foreground"
         :image="project.image"
         :url="project.url"
       />
