@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import ProjectCard from './ProjectCard.vue'
+import ProjectDialog from './ProjectDialog.vue'
 import abstractPianoArt from '@/assets/abstract_piano_art.svg'
 import pokeview from '@/assets/pokeview.svg'
 
@@ -7,20 +9,41 @@ const projects = [
   {
     title: 'Enkelt piano',
     description: 'Spill piano i nettlesern',
+    longDescription:
+      'Et enkelt piano du kan spille direkte i nettleseren. Bruk tastaturet eller klikk på tangentene for å spille.',
     color: '#E2EDD6',
     foreground: '#1C3201',
     image: abstractPianoArt,
-    url: 'https://shady356.github.io/simple-piano/',
+    githubUrl: 'https://github.com/shady356/simple-piano',
+    websiteUrl: 'https://shady356.github.io/simple-piano/',
   },
   {
     title: 'PokéView',
     description: 'Utforsk Pokémon-verdenen',
+    longDescription:
+      'En Pokédex-app der du kan søke og utforske alle Pokémon med informasjon hentet fra PokéAPI.',
     color: '#F6FBFF',
     foreground: '#02264A',
     image: pokeview,
-    url: 'https://shady356.github.io/pokedex/',
+    githubUrl: 'https://github.com/shady356/pokedex',
+    websiteUrl: 'https://shady356.github.io/pokedex/',
+  },
+  {
+    title: 'Fantasy Premier League Design',
+    description: 'Et UI/UX design case for Fantasy Premier League.',
+    longDescription:
+      'Et UI/UX design case der jeg redesignet Fantasy Premier League-appen for å forbedre brukeropplevelsen og gjøre det mer intuitivt.',
+    color: '#F3E5FF',
+    foreground: '#2B0A47',
+    image: pokeview,
+    githubUrl: 'https://github.com/shady356/pokedex',
+    websiteUrl: 'https://shady356.github.io/pokedex/',
   },
 ]
+
+type Project = (typeof projects)[number]
+
+const selectedProject = ref<Project | null>(null)
 </script>
 
 <template>
@@ -35,10 +58,21 @@ const projects = [
         :color="project.color"
         :foreground="project.foreground"
         :image="project.image"
-        :url="project.url"
+        @select="selectedProject = project"
       />
     </div>
   </section>
+
+  <ProjectDialog
+    v-if="selectedProject"
+    :title="selectedProject.title"
+    :description="selectedProject.longDescription"
+    :image="selectedProject.image"
+    :color="selectedProject.color"
+    :github-url="selectedProject.githubUrl"
+    :website-url="selectedProject.websiteUrl || undefined"
+    @close="selectedProject = null"
+  />
 </template>
 
 <style scoped>
@@ -59,5 +93,20 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .projects-section {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .cards-grid {
+    justify-content: center;
+  }
 }
 </style>

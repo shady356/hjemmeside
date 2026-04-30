@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import Header from '@/components/Header.vue'
 import Projects from '@/components/Projects.vue'
+import Footer from '@/components/Footer.vue'
 
 const topPhoto = ref(1)
 
@@ -14,15 +16,7 @@ const photo2Style = computed(() => ({ zIndex: topPhoto.value === 2 ? 2 : 1 }))
 
 <template>
   <a href="#main-content" class="skip-link">Hopp til innhold</a>
-  <header>
-    <a href="#about" class="home-link-name">Henrik Oddløkken</a>
-    <nav>
-      <ul>
-        <li><a href="#projects">Prosjekter</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
+  <Header />
   <main id="main-content">
     <div class="top-row">
       <section id="about" class="ingress-section">
@@ -55,9 +49,7 @@ const photo2Style = computed(() => ({ zIndex: topPhoto.value === 2 ? 2 : 1 }))
     </div>
   </main>
   <Projects />
-  <section id="contact" class="contact-section">
-    <h2>Kontakt</h2>
-  </section>
+  <Footer />
 </template>
 
 <style scoped>
@@ -89,49 +81,9 @@ const photo2Style = computed(() => ({ zIndex: topPhoto.value === 2 ? 2 : 1 }))
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #1c3201;
+  outline: 2px solid #333;
   outline-offset: 3px;
   border-radius: 2px;
-}
-
-.contact-section {
-  width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 2rem 3rem 4rem;
-  box-sizing: border-box;
-}
-
-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  background-color: #fdf8ef;
-}
-
-.home-link-name {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-nav {
-  display: flex;
-  gap: 1rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
 }
 
 main {
