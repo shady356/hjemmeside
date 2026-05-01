@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref, watch } from 'vue'
 import FPLColorSwatches from '@/components/FPLColorSwatches.vue'
 import BaseButtonIcon from '@/components/BaseButtonIcon.vue'
