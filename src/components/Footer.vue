@@ -19,7 +19,6 @@
 <style scoped>
 footer {
   width: 100%;
-  background-color: #ffedce;
   margin-top: auto;
 }
 
@@ -37,7 +36,7 @@ ul {
 }
 
 ul a {
-  color: #333;
+  color: var(--primary-text);
   text-decoration: none;
   font-weight: 500;
 }

@@ -48,7 +48,7 @@ defineEmits<{ select: [] }>()
 }
 
 .card:focus-visible {
-  outline-offset: 3px;
+  outline-offset: var(--outline-offset);
 }
 
 .card-image {

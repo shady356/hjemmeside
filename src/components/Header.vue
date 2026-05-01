@@ -18,11 +18,13 @@ header {
   align-items: center;
   padding: 2rem;
   background-color: #fdf8ef;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .home-link-name {
   text-decoration: none;
-  color: #333;
+  color: var(--primary-text);
   font-weight: 500;
 }
 
@@ -39,7 +41,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: var(--primary-text);
   font-weight: 500;
 }
 </style>

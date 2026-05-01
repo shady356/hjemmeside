@@ -28,9 +28,9 @@ import Footer from '@/components/Footer.vue'
   height: auto;
   padding: 0.5rem 1rem;
   background: #fff;
-  color: #333;
+  color: var(--primary-text);
   font-weight: 600;
-  border: 2px solid #333;
+  border: 2px solid var(--primary-text);
   border-radius: 4px;
   z-index: 9999;
   text-decoration: none;
@@ -39,8 +39,8 @@ import Footer from '@/components/Footer.vue'
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #333;
-  outline-offset: 3px;
+  outline: 2px solid var(--outline-color);
+  outline-offset: var(--outline-offset);
   border-radius: 2px;
 }
 </style>

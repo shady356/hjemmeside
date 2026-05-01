@@ -51,18 +51,18 @@ withDefaults(
 }
 .base-button.outline {
   background-color: #eee;
-  color: #444;
+  color: var(--secondary-text);
 }
 .base-button.outline:hover {
   background-color: #ddd;
-  color: #444;
+  color: var(--secondary-text);
 }
 .base-button.outline:active {
   background-color: #eee;
   color: #fff;
 }
 .base-button:focus-visible {
-  outline: 2px solid #555;
-  outline-offset: 2px;
+  outline: 2px solid var(--outline-color);
+  outline-offset: var(--outline-offset);
 }
 </style>

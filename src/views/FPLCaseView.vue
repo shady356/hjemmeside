@@ -1,3 +1,18 @@
+<script setup>
+import messengerImg from '@/assets/fpl/messenger.png'
+import ruterImg from '@/assets/fpl/Ruter.png'
+import fplFrontpageImg from '@/assets/fpl/fpl frontpage.png'
+import hjemImg from '@/assets/fpl/Hjem.png'
+import spillereImg from '@/assets/fpl/Spillere.png'
+import spillereTabellImg from '@/assets/fpl/Spillere tabellvisning.png'
+import spillereFiltrerImg from '@/assets/fpl/Spillere filtrer runder.png'
+import spillere3SisteImg from '@/assets/fpl/Spillere filtrer 3 siste rundene.png'
+import kamperImg from '@/assets/fpl/Kamper.png'
+import kamperFargeneImg from '@/assets/fpl/Kamper Hva betyr fargene.png'
+import kamperFiltrerImg from '@/assets/fpl/Kamper filtrer runder.png'
+import kamperSortertImg from '@/assets/fpl/Kamper sortert og filtrert.png'
+</script>
+
 <template>
   <main id="main-content" class="case-page">
     <!-- Hero -->
@@ -45,6 +60,10 @@
           runde. Det gjør at man potensielt taper mange poeng ettersom man vil velge ut hvilke
           spillere som kan gjøre det bra mot visse lag.
         </p>
+        <figure class="screenshot-messenger">
+          <img :src="messengerImg" alt="Skjermdumper fra messenger chat" />
+          <figcaption class="screenshot-caption">Skjermdumper fra messenger chat</figcaption>
+        </figure>
         <blockquote>
           <p>
             "I don't get why people who have the app, don't have notifications turned on, it boggles
@@ -74,6 +93,16 @@
           I den offisielle FPL-appen vises også deadline-datoen i appen, men blir overskygget av
           hvor mange poeng du fikk denne runden (Game week).
         </p>
+        <div class="screenshot-pair">
+          <figure class="screenshot-frame">
+            <img :src="ruterImg" alt="Skjermdump fra Ruter-app" />
+            <figcaption class="screenshot-caption">Skjermdump fra Ruter-app</figcaption>
+          </figure>
+          <figure class="screenshot-frame">
+            <img :src="fplFrontpageImg" alt="Skjermdump fra offisielle FPL-app" />
+            <figcaption class="screenshot-caption">Skjermdump fra offisielle FPL-app</figcaption>
+          </figure>
+        </div>
       </section>
 
       <!-- 3. Design av app -->
@@ -91,47 +120,8 @@
           to andre kortene som er mer sekundære valg. Disse kortene, "Spillere" og "Kamper" er neste
           delen av appen jeg vil snakke om.
         </p>
-
-        <div class="mockup-wrap">
-          <div class="phone-screen" aria-label="App-skjerm: Hjem">
-            <div class="screen-content">
-              <p class="screen-greeting">God morgen, Manager 👋</p>
-
-              <div class="deadline-card">
-                <p class="card-label">Runde 26 starter</p>
-                <p class="card-date">10. februar kl. 19:00</p>
-                <p class="card-days">3 dager igjen</p>
-                <div class="card-divider"></div>
-                <div class="card-toggle-row">
-                  <span>Få varsel 1 time før runden starter</span>
-                  <div class="toggle on" aria-hidden="true"></div>
-                </div>
-              </div>
-
-              <div class="nav-card">
-                <div class="nav-icon teal">👕</div>
-                <div class="nav-text">
-                  <p class="nav-title">Se spillere</p>
-                  <p class="nav-desc">Form, poeng totalt, xG og mer</p>
-                </div>
-                <span class="nav-arrow" aria-hidden="true">→</span>
-              </div>
-
-              <div class="nav-card">
-                <div class="nav-icon blue">⚽</div>
-                <div class="nav-text">
-                  <p class="nav-title">Se kamper</p>
-                  <p class="nav-desc">Sorter lagene etter vanskelighetsgrad</p>
-                </div>
-                <span class="nav-arrow" aria-hidden="true">→</span>
-              </div>
-            </div>
-            <div class="bottom-nav" aria-hidden="true">
-              <span class="nav-item active">🏠 Hjem</span>
-              <span class="nav-item">👕 Spillere</span>
-              <span class="nav-item">⚽ Kamper</span>
-            </div>
-          </div>
+        <div class="screenshot-single">
+          <img :src="hjemImg" alt="App-skjerm: Hjem" />
         </div>
       </section>
 
@@ -154,95 +144,27 @@
           seneste kampene, ikke bare over hele sesongen. Derfor har jeg lagt inn et ekstra filter
           hvor man kan filtrere på Runder.
         </p>
-
-        <div class="mockup-wrap">
-          <div class="phone-screen" aria-label="App-skjerm: Spillere">
-            <div class="screen-content">
-              <div class="screen-header">
-                <span class="screen-title">Spillere</span>
-                <div class="view-toggles" aria-hidden="true">
-                  <span class="view-toggle active">⊞</span>
-                  <span class="view-toggle">≡</span>
-                </div>
-              </div>
-              <div class="filter-row" aria-hidden="true">
-                <span class="filter-chip">Alle lag ▾</span>
-                <span class="filter-chip">Alle posisjoner ▾</span>
-                <span class="filter-chip">3 siste runder ▾</span>
-              </div>
-
-              <div class="stat-group">
-                <div class="stat-label">
-                  Form
-                  <span class="stat-sub">Gjennomsnittlig poeng fra de siste rundene</span>
-                </div>
-                <div class="player-row">
-                  <div class="player-avatar" style="background: #e8d5f0"></div>
-                  <div class="player-info">
-                    <span class="player-name">Gabriel</span>
-                    <span class="player-meta">Arsenal · Forsvar</span>
-                  </div>
-                  <span class="player-val">10,6</span>
-                </div>
-                <div class="player-row">
-                  <div class="player-avatar" style="background: #f0d5d5"></div>
-                  <div class="player-info">
-                    <span class="player-name">Pedro</span>
-                    <span class="player-meta">Chelsea · Angrep</span>
-                  </div>
-                  <span class="player-val">6,3</span>
-                </div>
-                <div class="player-row">
-                  <div class="player-avatar" style="background: #d5e0f0"></div>
-                  <div class="player-info">
-                    <span class="player-name">Fernandes</span>
-                    <span class="player-meta">Man Utd · Midtbane</span>
-                  </div>
-                  <span class="player-val">5,6</span>
-                </div>
-              </div>
-
-              <div class="stat-group">
-                <div class="stat-label">Poeng</div>
-                <div class="player-row">
-                  <div class="player-avatar" style="background: #e8d5f0"></div>
-                  <div class="player-info">
-                    <span class="player-name">Gabriel</span>
-                    <span class="player-meta">Arsenal · Forsvar</span>
-                  </div>
-                  <span class="player-val">32</span>
-                </div>
-                <div class="player-row">
-                  <div class="player-avatar" style="background: #f0d5d5"></div>
-                  <div class="player-info">
-                    <span class="player-name">Pedro</span>
-                    <span class="player-meta">Chelsea · Angrep</span>
-                  </div>
-                  <span class="player-val">19</span>
-                </div>
-                <div class="player-row">
-                  <div class="player-avatar" style="background: #d5e0f0"></div>
-                  <div class="player-info">
-                    <span class="player-name">Fernandes</span>
-                    <span class="player-meta">Man Utd · Midtbane</span>
-                  </div>
-                  <span class="player-val">17</span>
-                </div>
-              </div>
-            </div>
-            <div class="bottom-nav" aria-hidden="true">
-              <span class="nav-item">🏠 Hjem</span>
-              <span class="nav-item active">👕 Spillere</span>
-              <span class="nav-item">⚽ Kamper</span>
-            </div>
-          </div>
+        <div class="screenshot-pair">
+          <figure class="screenshot-frame">
+            <img :src="spillereImg" alt="Spillere - kortvisning" />
+          </figure>
+          <figure class="screenshot-frame">
+            <img :src="spillereTabellImg" alt="Spillere - tabellvisning" />
+          </figure>
         </div>
-
         <p>
           Ved å filtrere på runder, kan man velge enten de 3 siste eller 5 siste rundene så man ser
           hvor mange poeng, mål, assist, xG etc. en spiller har hatt i det siste. Dette gir en
           pekepinn på hvor gode de har vært i det siste.
         </p>
+        <div class="screenshot-pair">
+          <figure class="screenshot-frame">
+            <img :src="spillereFiltrerImg" alt="Spillere - filtrer runder" />
+          </figure>
+          <figure class="screenshot-frame">
+            <img :src="spillere3SisteImg" alt="Spillere - 3 siste rundene" />
+          </figure>
+        </div>
       </section>
 
       <!-- 5. Fixtures -->
@@ -260,87 +182,14 @@
           fremtiden samt at man kan sortere lagene etter hvor vanskelige motstanderne er. I tillegg,
           for de som ikke er vant med FPL, så er det nødvendig å forklare hva fargene betyr.
         </p>
-
-        <div class="mockup-wrap">
-          <div class="phone-screen" aria-label="App-skjerm: Kamper">
-            <div class="screen-content">
-              <div class="screen-header">
-                <span class="screen-title">Kamper</span>
-              </div>
-              <div class="filter-row" aria-hidden="true">
-                <span class="filter-chip">3 neste runder ▾</span>
-                <span class="filter-chip">↕ Letteste kamper ▾</span>
-              </div>
-
-              <div class="fdr-legend" aria-label="Fargeskala: 1 er lettest, 5 er vanskeligst">
-                <span class="fdr-chip fdr-1">1</span>
-                <span class="fdr-chip fdr-2">2</span>
-                <span class="fdr-chip fdr-3">3</span>
-                <span class="fdr-chip fdr-4">4</span>
-                <span class="fdr-chip fdr-5">5</span>
-                <span class="fdr-scale-label">Lett</span>
-                <span class="fdr-scale-label right">Vanskelig</span>
-              </div>
-
-              <div class="fdr-table-wrap">
-                <table class="fdr-table">
-                  <thead>
-                    <tr>
-                      <th>Lag</th>
-                      <th>R26</th>
-                      <th>R27</th>
-                      <th>R28</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="team-cell">ARS</td>
-                      <td><span class="fdr-cell fdr-1">BRE(B)</span></td>
-                      <td><span class="fdr-cell fdr-1">WOL(B)</span></td>
-                      <td><span class="fdr-cell fdr-3">TOT(H)</span></td>
-                    </tr>
-                    <tr>
-                      <td class="team-cell">CRY</td>
-                      <td><span class="fdr-cell fdr-1">BUR(H)</span></td>
-                      <td><span class="fdr-cell fdr-1">WOL(H)</span></td>
-                      <td><span class="fdr-cell fdr-3">MUN(H)</span></td>
-                    </tr>
-                    <tr>
-                      <td class="team-cell">AVL</td>
-                      <td><span class="fdr-cell fdr-3">BRI(H)</span></td>
-                      <td><span class="fdr-cell fdr-2">LEE(H)</span></td>
-                      <td><span class="fdr-cell fdr-2">WOL(A)</span></td>
-                    </tr>
-                    <tr>
-                      <td class="team-cell">EVE</td>
-                      <td><span class="fdr-cell fdr-3">BOU(H)</span></td>
-                      <td><span class="fdr-cell fdr-3">MUN(H)</span></td>
-                      <td><span class="fdr-cell fdr-3">NEW(H)</span></td>
-                    </tr>
-                    <tr>
-                      <td class="team-cell">CHE</td>
-                      <td><span class="fdr-cell fdr-3">LEE(H)</span></td>
-                      <td><span class="fdr-cell fdr-4">BUR(H)</span></td>
-                      <td><span class="fdr-cell fdr-4">ARS(H)</span></td>
-                    </tr>
-                    <tr>
-                      <td class="team-cell">BRE</td>
-                      <td><span class="fdr-cell fdr-5">ARS(H)</span></td>
-                      <td><span class="fdr-cell fdr-5">BRI(H)</span></td>
-                      <td><span class="fdr-cell fdr-5">BUR(H)</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="bottom-nav" aria-hidden="true">
-              <span class="nav-item">🏠 Hjem</span>
-              <span class="nav-item">👕 Spillere</span>
-              <span class="nav-item active">⚽ Kamper</span>
-            </div>
-          </div>
+        <div class="screenshot-pair">
+          <figure class="screenshot-frame">
+            <img :src="kamperImg" alt="Kamper" />
+          </figure>
+          <figure class="screenshot-frame">
+            <img :src="kamperFargeneImg" alt="Kamper - hva betyr fargene" />
+          </figure>
         </div>
-
         <p>
           I eksempelet vises de 3 neste rundene og kampene er sortert på hvor lette de er. Med
           denne oversikten kan det tyde på at bl.a. Arsenal og Crystal Palace er gode valg å hente
@@ -348,6 +197,14 @@
           uten filter og sortering ville det tatt sin tid ettersom man må scrolle opp og ned for å
           sammenligne hvem som har de letteste kampene fremover.
         </p>
+        <div class="screenshot-pair">
+          <figure class="screenshot-frame">
+            <img :src="kamperFiltrerImg" alt="Kamper - filtrer runder" />
+          </figure>
+          <figure class="screenshot-frame">
+            <img :src="kamperSortertImg" alt="Kamper - sortert og filtrert" />
+          </figure>
+        </div>
       </section>
 
       <!-- 6. Design tokens -->
@@ -631,374 +488,67 @@ blockquote cite {
   text-align: center;
 }
 
-/* ─── Phone mockup ─── */
-.mockup-wrap {
-  margin: 2rem auto;
+/* ─── Screenshots ─── */
+.screenshot-pair {
   display: flex;
+  gap: 16px;
   justify-content: center;
-}
-
-.phone-screen {
-  background: #fafafa;
-  border-radius: 24px;
-  border: 2px solid #e0e0e0;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-  width: 100%;
-  max-width: 320px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.screen-content {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-}
-
-.screen-greeting {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #26272c;
-  margin: 4px 0 0;
-}
-
-/* ─── Deadline card ─── */
-.deadline-card {
-  background: #3d195b;
-  color: #fff;
-  border-radius: 16px;
-  padding: 16px;
-}
-
-.card-label {
-  font-size: 0.65rem;
-  opacity: 0.75;
-  margin: 0 0 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.card-date {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin: 0 0 4px;
-}
-
-.card-days {
-  font-size: 0.78rem;
-  opacity: 0.8;
-  margin: 0;
-}
-
-.card-divider {
-  border-top: 1px dashed rgba(255, 255, 255, 0.3);
-  margin: 12px 0;
-}
-
-.card-toggle-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.73rem;
-  gap: 8px;
-}
-
-.toggle {
-  flex-shrink: 0;
-  width: 36px;
-  height: 20px;
-  border-radius: 100px;
-  background: rgba(255, 255, 255, 0.3);
-  position: relative;
-}
-
-.toggle::after {
-  content: '';
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #fff;
-  top: 2px;
-  left: 2px;
-}
-
-.toggle.on {
-  background: #4fc3f7;
-}
-
-.toggle.on::after {
-  left: 18px;
-}
-
-/* ─── Nav cards ─── */
-.nav-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-.nav-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-
-.nav-icon.teal {
-  background: #c3f7e5;
-}
-
-.nav-icon.blue {
-  background: #dde8ff;
-}
-
-.nav-text {
-  flex: 1;
-}
-
-.nav-title {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #26272c;
-  margin: 0;
-}
-
-.nav-desc {
-  font-size: 0.7rem;
-  color: #3f455e;
-  margin: 0;
-}
-
-.nav-arrow {
-  color: #3f455e;
-  font-size: 0.9rem;
-}
-
-/* ─── Screen header ─── */
-.screen-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4px 0;
-}
-
-.screen-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #26272c;
-}
-
-.view-toggles {
-  display: flex;
-  gap: 6px;
-}
-
-.view-toggle {
-  font-size: 0.9rem;
-  opacity: 0.35;
-}
-
-.view-toggle.active {
-  opacity: 1;
-  color: #3d195b;
-}
-
-/* ─── Filters ─── */
-.filter-row {
-  display: flex;
-  gap: 6px;
+  margin: 2rem 0;
   flex-wrap: wrap;
 }
 
-.filter-chip {
-  font-size: 0.68rem;
-  padding: 4px 8px;
-  background: #fff;
-  border: 1px solid #cccccc;
-  border-radius: 100px;
-  color: #3f455e;
-  white-space: nowrap;
-}
-
-/* ─── Player list ─── */
-.stat-group {
-  background: #fff;
-  border-radius: 16px;
-  padding: 12px;
+.screenshot-frame {
+  flex: 1;
+  min-width: 0;
+  max-width: 340px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-.stat-label {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #26272c;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.stat-sub {
-  font-size: 0.66rem;
-  font-weight: 400;
-  color: #3f455e;
-}
-
-.player-row {
-  display: flex;
   align-items: center;
   gap: 8px;
+  margin: 0;
 }
 
-.player-avatar {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  flex-shrink: 0;
+.screenshot-frame img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  display: block;
 }
 
-.player-info {
-  flex: 1;
+.screenshot-caption {
+  font-size: 0.75rem;
+  color: #3f455e;
+  text-align: center;
+}
+
+.screenshot-single {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.screenshot-single img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  display: block;
+}
+
+.screenshot-messenger {
   display: flex;
   flex-direction: column;
-}
-
-.player-name {
-  font-size: 0.76rem;
-  font-weight: 600;
-  color: #26272c;
-}
-
-.player-meta {
-  font-size: 0.66rem;
-  color: #3f455e;
-}
-
-.player-val {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #26272c;
-}
-
-/* ─── FDR ─── */
-.fdr-legend {
-  display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
+  margin: 1.5rem 0;
 }
 
-.fdr-chip {
-  width: 22px;
-  height: 22px;
-  border-radius: 6px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  flex-shrink: 0;
-}
-
-.fdr-scale-label {
-  font-size: 0.66rem;
-  color: #3f455e;
-  margin: 0 2px;
-}
-
-.fdr-scale-label.right {
-  margin-left: auto;
-}
-
-.fdr-table-wrap {
-  overflow-x: auto;
-}
-
-.fdr-table {
+.screenshot-messenger img {
   width: 100%;
-  border-collapse: collapse;
-  font-size: 0.7rem;
-}
-
-.fdr-table th {
-  text-align: left;
-  padding: 4px 4px;
-  color: #3f455e;
-  font-weight: 600;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.fdr-table td {
-  padding: 4px 2px;
-}
-
-.team-cell {
-  font-weight: 700;
-  color: #26272c;
-  padding-left: 0 !important;
-  white-space: nowrap;
-}
-
-.fdr-cell {
-  display: inline-block;
-  padding: 3px 5px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.66rem;
-  white-space: nowrap;
-}
-
-.fdr-1 {
-  background: #375523;
-  color: #fff;
-}
-.fdr-2 {
-  background: #04f9a5;
-  color: #1a3a2a;
-}
-.fdr-3 {
-  background: #cccccc;
-  color: #333;
-}
-.fdr-4 {
-  background: #ee5b80;
-  color: #fff;
-}
-.fdr-5 {
-  background: #80072d;
-  color: #fff;
-}
-
-/* ─── Bottom nav ─── */
-.bottom-nav {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 16px 14px;
-  border-top: 1px solid #e5e5e5;
-  background: #fafafa;
-}
-
-.nav-item {
-  font-size: 0.68rem;
-  color: #3f455e;
-}
-
-.nav-item.active {
-  color: #3d195b;
-  font-weight: 600;
+  max-width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
 /* ─── Design tokens ─── */
@@ -1041,10 +591,9 @@ blockquote cite {
   align-items: flex-end;
   gap: 1rem;
   flex-wrap: wrap;
-  padding: 1rem 0;
+  padding: 1.25rem;
   background: #fff;
   border-radius: 12px;
-  padding: 1.25rem;
   border: 1px solid #e5e5e5;
 }
 
@@ -1109,6 +658,10 @@ blockquote cite {
 
   .spacing-demo {
     gap: 0.75rem;
+  }
+
+  .screenshot-pair {
+    gap: 12px;
   }
 }
 </style>

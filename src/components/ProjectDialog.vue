@@ -89,7 +89,7 @@ dialog[open] {
   background: rgba(255, 255, 255, 0.85);
   border: none;
   cursor: pointer;
-  color: #444;
+  color: var(--secondary-text);
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -104,7 +104,7 @@ dialog[open] {
 }
 
 .close-button:focus-visible {
-  outline-offset: 2px;
+  outline-offset: var(--outline-offset);
 }
 
 h2 {
@@ -116,7 +116,7 @@ h2 {
 
 p {
   margin: 0 0 1.75rem;
-  color: #333;
+  color: var(--primary-text);
   line-height: 1.6;
 }
 
