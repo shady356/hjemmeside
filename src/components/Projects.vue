@@ -6,7 +6,22 @@ import abstractPianoArt from '@/assets/abstract_piano_art.svg'
 import pokeview from '@/assets/pokeview.svg'
 import fplEffect from '@/assets/fplEffect.svg'
 
-const projects = [
+interface Project {
+  title: string
+  description: string
+  longDescription: string
+  color: string
+  foreground: string
+  image: string
+  githubUrl: string
+  websiteUrl?: string
+  dialogTo?: string
+  primaryLabel?: string
+  badge?: string
+  badgeIcon?: 'book' | 'mobile' | 'music'
+}
+
+const projects: Project[] = [
   {
     title: 'Enkelt piano',
     description: 'Spill piano i nettlesern med tastaturet eller musen',
@@ -17,11 +32,8 @@ const projects = [
     image: abstractPianoArt,
     githubUrl: 'https://github.com/shady356/simple-piano',
     websiteUrl: 'https://shady356.github.io/simple-piano/',
-    to: undefined as string | undefined,
-    dialogTo: undefined as string | undefined,
-    primaryLabel: undefined as string | undefined,
     badge: 'Spiller lyd',
-    badgeIcon: 'music' as 'book' | 'mobile' | 'music' | undefined,
+    badgeIcon: 'music',
   },
   {
     title: 'PokéView',
@@ -33,11 +45,8 @@ const projects = [
     image: pokeview,
     githubUrl: 'https://github.com/shady356/pokedex',
     websiteUrl: 'https://shady356.github.io/pokedex/',
-    to: undefined as string | undefined,
-    dialogTo: undefined as string | undefined,
-    primaryLabel: undefined as string | undefined,
     badge: 'Mobile app',
-    badgeIcon: 'mobile' as 'book' | 'mobile' | 'music' | undefined,
+    badgeIcon: 'mobile',
   },
   {
     title: 'FPL Design',
@@ -48,16 +57,12 @@ const projects = [
     foreground: '#43245d',
     image: fplEffect,
     githubUrl: '',
-    websiteUrl: undefined,
-    to: undefined as string | undefined,
     dialogTo: '/fpl-case',
     primaryLabel: 'Les dette Caset',
     badge: 'Design Case',
-    badgeIcon: 'book' as 'book' | 'mobile' | 'music' | undefined,
+    badgeIcon: 'book',
   },
 ]
-
-type Project = (typeof projects)[number]
 
 const selectedProject = ref<Project | null>(null)
 
@@ -90,7 +95,7 @@ function handleSelect(project: Project) {
     :image="selectedProject.image"
     :color="selectedProject.color"
     :github-url="selectedProject.githubUrl"
-    :website-url="selectedProject.websiteUrl || undefined"
+    :website-url="selectedProject.websiteUrl"
     :to="selectedProject.dialogTo"
     :primary-label="selectedProject.primaryLabel"
     :badge="selectedProject.badge"

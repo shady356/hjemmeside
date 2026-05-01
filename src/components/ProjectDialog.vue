@@ -7,6 +7,8 @@ import BookIcon from './icons/BookIcon.vue'
 import MobileIcon from './icons/MobileIcon.vue'
 import MusicIcon from './icons/MusicIcon.vue'
 
+const iconMap = { book: BookIcon, mobile: MobileIcon, music: MusicIcon }
+
 defineProps<{
   title: string
   description: string
@@ -41,10 +43,8 @@ function close() {
       </button>
       <div class="dialog-image-wrapper" :style="{ background: color }">
         <BaseBadge v-if="badge" class="dialog-badge">
-          <template #icon>
-            <MobileIcon v-if="badgeIcon === 'mobile'" />
-            <MusicIcon v-else-if="badgeIcon === 'music'" />
-            <BookIcon v-else />
+          <template v-if="badgeIcon" #icon>
+            <component :is="iconMap[badgeIcon]" />
           </template>
           {{ badge }}
         </BaseBadge>

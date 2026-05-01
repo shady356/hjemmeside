@@ -1,16 +1,5 @@
-<script setup lang="ts">
-withDefaults(
-  defineProps<{
-    variant?: 'default' | 'inverted'
-  }>(),
-  {
-    variant: 'default',
-  },
-)
-</script>
-
 <template>
-  <span class="badge" :class="variant">
+  <span class="badge">
     <span v-if="$slots.icon" class="badge-icon">
       <slot name="icon" />
     </span>
@@ -31,9 +20,6 @@ withDefaults(
   padding: 0.5rem 0.75rem;
   border-radius: 100px;
   white-space: nowrap;
-}
-
-.badge.default {
   background: #ffffffaa;
   color: var(--primary-text);
 }

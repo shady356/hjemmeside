@@ -30,7 +30,7 @@ import kamperSortertImg from '@/assets/fpl/Kamper sortert og filtrert.png'
     </div>
 
     <div class="content-wrap">
-      <RouterLink to="/" class="back-link">← Tilbake</RouterLink>
+      <RouterLink to="/" class="back-link">← Tilbake til fremsiden</RouterLink>
 
       <!-- 1. Problem -->
       <section class="case-section">
