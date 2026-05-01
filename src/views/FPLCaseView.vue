@@ -16,16 +16,16 @@ import kamperFargeneImg from '@/assets/fpl/Kamper Hva betyr fargene.png'
 import kamperFiltrerImg from '@/assets/fpl/Kamper filtrer runder.png'
 import kamperSortertImg from '@/assets/fpl/Kamper sortert og filtrert.png'
 
-const lightboxSrc = ref(null)
-const lightboxRef = ref(null)
+const lightboxSrc = ref<string | null>(null)
+const lightboxRef = ref<HTMLDialogElement | null>(null)
 
 watch(lightboxSrc, (src) => {
   if (src) lightboxRef.value?.showModal()
   else lightboxRef.value?.close()
 })
 
-function onImgClick(e) {
-  const img = e.target.closest('img')
+function onImgClick(e: PointerEvent) {
+  const img = (e.target as Element)?.closest('img') as HTMLImageElement | null
   if (img) lightboxSrc.value = img.src
 }
 </script>
@@ -306,7 +306,7 @@ function onImgClick(e) {
     <BaseButtonIcon class="lightbox-close" @click.stop="lightboxSrc = null" aria-label="Lukk">
       <ExitIcon />
     </BaseButtonIcon>
-    <img :src="lightboxSrc" alt="" class="lightbox-img" @click.stop />
+    <img :src="lightboxSrc ?? undefined" alt="" class="lightbox-img" @click.stop />
   </dialog>
 </template>
 
