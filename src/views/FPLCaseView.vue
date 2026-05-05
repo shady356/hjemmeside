@@ -3,18 +3,18 @@ import { ref, watch } from 'vue'
 import FPLColorSwatches from '@/components/FPLColorSwatches.vue'
 import BaseButtonIcon from '@/components/BaseButtonIcon.vue'
 import ExitIcon from '@/components/icons/ExitIcon.vue'
-import messengerImg from '@/assets/fpl/messenger.png'
-import ruterImg from '@/assets/fpl/Ruter.png'
-import fplFrontpageImg from '@/assets/fpl/fpl frontpage.png'
-import hjemImg from '@/assets/fpl/Hjem.png'
-import spillereImg from '@/assets/fpl/Spillere.png'
-import spillereTabellImg from '@/assets/fpl/Spillere tabellvisning.png'
-import spillereFiltrerImg from '@/assets/fpl/Spillere filtrer runder.png'
-import spillere3SisteImg from '@/assets/fpl/Spillere filtrer 3 siste rundene.png'
-import kamperImg from '@/assets/fpl/Kamper.png'
-import kamperFargeneImg from '@/assets/fpl/Kamper Hva betyr fargene.png'
-import kamperFiltrerImg from '@/assets/fpl/Kamper filtrer runder.png'
-import kamperSortertImg from '@/assets/fpl/Kamper sortert og filtrert.png'
+import messengerImg from '@/assets/fpl/messenger.webp'
+import ruterImg from '@/assets/fpl/Ruter.webp'
+import fplFrontpageImg from '@/assets/fpl/fpl frontpage.webp'
+import hjemImg from '@/assets/fpl/Hjem.webp'
+import spillereImg from '@/assets/fpl/Spillere.webp'
+import spillereTabellImg from '@/assets/fpl/Spillere tabellvisning.webp'
+import spillereFiltrerImg from '@/assets/fpl/Spillere filtrer runder.webp'
+import spillere3SisteImg from '@/assets/fpl/Spillere filtrer 3 siste rundene.webp'
+import kamperImg from '@/assets/fpl/Kamper.webp'
+import kamperFargeneImg from '@/assets/fpl/Kamper Hva betyr fargene.webp'
+import kamperFiltrerImg from '@/assets/fpl/Kamper filtrer runder.webp'
+import kamperSortertImg from '@/assets/fpl/Kamper sortert og filtrert.webp'
 
 const lightboxSrc = ref<string | null>(null)
 const lightboxRef = ref<HTMLDialogElement | null>(null)
@@ -293,7 +293,9 @@ function onImgClick(e: PointerEvent) {
         </p>
       </section>
 
-      <RouterLink :to="{ name: 'home' }" class="back-link back-link--bottom">← Tilbake til fremsiden</RouterLink>
+      <RouterLink :to="{ name: 'home' }" class="back-link back-link--bottom"
+        >← Tilbake til fremsiden</RouterLink
+      >
     </div>
   </main>
 

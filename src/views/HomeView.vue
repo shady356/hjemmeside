@@ -28,14 +28,14 @@ const photo2Style = computed(() => ({ zIndex: topPhoto.value === 2 ? 2 : 1 }))
             class="photos-1"
             :class="{ 'is-top': topPhoto === 1 }"
             :style="photo1Style"
-            src="@/assets/meg1.jpg"
+            src="@/assets/meg1.webp"
             alt="Bilde av meg"
           />
           <img
             class="photos-2"
             :class="{ 'is-top': topPhoto === 2 }"
             :style="photo2Style"
-            src="@/assets/meg3.jpg"
+            src="@/assets/meg3.webp"
             alt="Bilde av meg 2"
           />
         </button>

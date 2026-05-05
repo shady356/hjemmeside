@@ -42,8 +42,8 @@ withDefaults(
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background-color: #005bb6;
-  color: #fff;
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
   border: none;
   border-radius: 40px;
   padding: 0.75rem 1.5rem;
@@ -55,21 +55,21 @@ withDefaults(
   transition: background-color 100ms ease-in-out;
 }
 .base-button.primary:hover {
-  background-color: #0f4780;
+  background-color: var(--btn-primary-bg-hover);
 }
 .base-button.primary:active {
-  background-color: #005bb6;
+  background-color: var(--btn-primary-bg);
 }
 .base-button.outline {
-  background-color: #eee;
+  background-color: var(--btn-outline-bg);
   color: var(--secondary-text);
-  border: 1.5px solid #ccc;
+  border: 1.5px solid var(--btn-outline-border);
 }
 .base-button.outline:hover {
-  background-color: #ddd;
+  background-color: var(--btn-outline-bg-hover);
 }
 .base-button.outline:active {
-  background-color: #eee;
+  background-color: var(--btn-outline-bg);
 }
 .base-button:focus-visible {
   outline: 2px solid var(--outline-color);

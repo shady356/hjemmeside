@@ -6,7 +6,7 @@
 
 <style scoped>
 .base-button-icon {
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--btn-icon-bg);
   border: none;
   cursor: pointer;
   color: var(--secondary-text);
@@ -20,7 +20,7 @@
 }
 
 .base-button-icon:hover {
-  background: rgba(255, 255, 255, 1);
+  background: var(--btn-icon-bg-hover);
 }
 
 .base-button-icon:focus-visible {
