@@ -78,7 +78,7 @@ function onImgClick(e: PointerEvent) {
           spillere som kan gjøre det bra mot visse lag.
         </p>
         <figure class="screenshot-messenger">
-          <img :src="messengerImg" alt="Skjermdumper fra messenger chat" loading="lazy" />
+          <img :src="messengerImg" alt="" loading="lazy" />
           <figcaption class="screenshot-caption">Skjermdumper fra messenger chat</figcaption>
         </figure>
         <blockquote>
@@ -112,11 +112,11 @@ function onImgClick(e: PointerEvent) {
         </p>
         <div class="screenshot-pair">
           <figure class="screenshot-frame">
-            <img :src="ruterImg" alt="Skjermdump fra Ruter-app" loading="lazy" />
+            <img :src="ruterImg" alt="" loading="lazy" />
             <figcaption class="screenshot-caption">Skjermdump fra Ruter-app</figcaption>
           </figure>
           <figure class="screenshot-frame">
-            <img :src="fplFrontpageImg" alt="Skjermdump fra offisielle FPL-app" loading="lazy" />
+            <img :src="fplFrontpageImg" alt="" loading="lazy" />
             <figcaption class="screenshot-caption">Skjermdump fra offisielle FPL-app</figcaption>
           </figure>
         </div>

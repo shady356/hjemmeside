@@ -23,14 +23,14 @@ const photo2Style = computed(() => ({ zIndex: topPhoto.value === 2 ? 2 : 1 }))
           en brobygger mellom disse to disiplinene.
         </p>
       </section>
-      <section class="photos">
+      <section class="photos" inert aria-hidden="true">
         <button aria-label="Vis neste bilde av meg" class="photo-button" @click="showNextPhoto()">
           <img
             class="photos-1"
             :class="{ 'is-top': topPhoto === 1 }"
             :style="photo1Style"
             src="@/assets/meg1.webp"
-            alt="Bilde av meg"
+            alt=""
             fetchpriority="high"
           />
           <img
@@ -38,7 +38,7 @@ const photo2Style = computed(() => ({ zIndex: topPhoto.value === 2 ? 2 : 1 }))
             :class="{ 'is-top': topPhoto === 2 }"
             :style="photo2Style"
             src="@/assets/meg3.webp"
-            alt="Bilde av meg 2"
+            alt=""
           />
         </button>
       </section>
