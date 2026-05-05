@@ -38,7 +38,7 @@ function close() {
 </script>
 
 <template>
-  <dialog ref="dialogRef" @close="emit('close')" @click="close">
+  <dialog ref="dialogRef" aria-labelledby="dialog-title" @close="emit('close')" @click="close">
     <div class="dialog-content" @click.stop>
       <BaseButtonIcon class="close-button" @click="close" title="Lukk" aria-label="Lukk dialog">
         <ExitIcon />
@@ -52,7 +52,7 @@ function close() {
         </BaseBadge>
         <img :src="project.image" alt="" class="dialog-image" />
       </div>
-      <h2>{{ project.title }}</h2>
+      <h2 id="dialog-title">{{ project.title }}</h2>
       <p>{{ project.longDescription }}</p>
       <div class="links">
         <BaseButton v-if="project.githubUrl" :href="project.githubUrl" :icon="ArrowRight" variant="outline"

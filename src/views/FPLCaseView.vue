@@ -78,7 +78,7 @@ function onImgClick(e: PointerEvent) {
           spillere som kan gjøre det bra mot visse lag.
         </p>
         <figure class="screenshot-messenger">
-          <img :src="messengerImg" alt="Skjermdumper fra messenger chat" />
+          <img :src="messengerImg" alt="Skjermdumper fra messenger chat" loading="lazy" />
           <figcaption class="screenshot-caption">Skjermdumper fra messenger chat</figcaption>
         </figure>
         <blockquote>
@@ -112,11 +112,11 @@ function onImgClick(e: PointerEvent) {
         </p>
         <div class="screenshot-pair">
           <figure class="screenshot-frame">
-            <img :src="ruterImg" alt="Skjermdump fra Ruter-app" />
+            <img :src="ruterImg" alt="Skjermdump fra Ruter-app" loading="lazy" />
             <figcaption class="screenshot-caption">Skjermdump fra Ruter-app</figcaption>
           </figure>
           <figure class="screenshot-frame">
-            <img :src="fplFrontpageImg" alt="Skjermdump fra offisielle FPL-app" />
+            <img :src="fplFrontpageImg" alt="Skjermdump fra offisielle FPL-app" loading="lazy" />
             <figcaption class="screenshot-caption">Skjermdump fra offisielle FPL-app</figcaption>
           </figure>
         </div>
@@ -138,7 +138,7 @@ function onImgClick(e: PointerEvent) {
           delen av appen jeg vil snakke om.
         </p>
         <div class="screenshot-single">
-          <img :src="hjemImg" alt="App-skjerm: Hjem" />
+          <img :src="hjemImg" alt="App-skjerm: Hjem" loading="lazy" />
         </div>
       </section>
 
@@ -163,10 +163,10 @@ function onImgClick(e: PointerEvent) {
         </p>
         <div class="screenshot-pair">
           <figure class="screenshot-frame">
-            <img :src="spillereImg" alt="Spillere - kortvisning" />
+            <img :src="spillereImg" alt="Spillere - kortvisning" loading="lazy" />
           </figure>
           <figure class="screenshot-frame">
-            <img :src="spillereTabellImg" alt="Spillere - tabellvisning" />
+            <img :src="spillereTabellImg" alt="Spillere - tabellvisning" loading="lazy" />
           </figure>
         </div>
         <p>
@@ -176,10 +176,10 @@ function onImgClick(e: PointerEvent) {
         </p>
         <div class="screenshot-pair">
           <figure class="screenshot-frame">
-            <img :src="spillereFiltrerImg" alt="Spillere - filtrer runder" />
+            <img :src="spillereFiltrerImg" alt="Spillere - filtrer runder" loading="lazy" />
           </figure>
           <figure class="screenshot-frame">
-            <img :src="spillere3SisteImg" alt="Spillere - 3 siste rundene" />
+            <img :src="spillere3SisteImg" alt="Spillere - 3 siste rundene" loading="lazy" />
           </figure>
         </div>
       </section>
@@ -201,10 +201,10 @@ function onImgClick(e: PointerEvent) {
         </p>
         <div class="screenshot-pair">
           <figure class="screenshot-frame">
-            <img :src="kamperImg" alt="Kamper" />
+            <img :src="kamperImg" alt="Kamper" loading="lazy" />
           </figure>
           <figure class="screenshot-frame">
-            <img :src="kamperFargeneImg" alt="Kamper - hva betyr fargene" />
+            <img :src="kamperFargeneImg" alt="Kamper - hva betyr fargene" loading="lazy" />
           </figure>
         </div>
         <p>
@@ -216,10 +216,10 @@ function onImgClick(e: PointerEvent) {
         </p>
         <div class="screenshot-pair">
           <figure class="screenshot-frame">
-            <img :src="kamperFiltrerImg" alt="Kamper - filtrer runder" />
+            <img :src="kamperFiltrerImg" alt="Kamper - filtrer runder" loading="lazy" />
           </figure>
           <figure class="screenshot-frame">
-            <img :src="kamperSortertImg" alt="Kamper - sortert og filtrert" />
+            <img :src="kamperSortertImg" alt="Kamper - sortert og filtrert" loading="lazy" />
           </figure>
         </div>
       </section>

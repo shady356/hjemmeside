@@ -33,6 +33,8 @@ nav {
 
 nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   gap: 1rem;
 }

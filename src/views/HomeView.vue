@@ -31,6 +31,7 @@ const photo2Style = computed(() => ({ zIndex: topPhoto.value === 2 ? 2 : 1 }))
             :style="photo1Style"
             src="@/assets/meg1.webp"
             alt="Bilde av meg"
+            fetchpriority="high"
           />
           <img
             class="photos-2"

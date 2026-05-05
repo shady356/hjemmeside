@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import FPLCaseView from '@/views/FPLCaseView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,7 +11,7 @@ const router = createRouter({
   },
   routes: [
     { path: '/', name: 'home', component: HomeView },
-    { path: '/fpl-case', name: 'fpl-case', component: FPLCaseView },
+    { path: '/fpl-case', name: 'fpl-case', component: () => import('@/views/FPLCaseView.vue') },
   ],
 })
 
