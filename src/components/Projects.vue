@@ -58,7 +58,7 @@ function handleSelect(project: Project) {
 </script>
 
 <template>
-  <section id="projects" class="projects-section">
+  <section id="projects" class="projects-section container">
     <h2>Mine Prosjekter</h2>
     <div class="cards-grid">
       <ProjectCard
@@ -84,10 +84,7 @@ function handleSelect(project: Project) {
 <style scoped>
 .projects-section {
   width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
   padding: 2rem 3rem 4rem;
-  box-sizing: border-box;
 }
 
 h2 {

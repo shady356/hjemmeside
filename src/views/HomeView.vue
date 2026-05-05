@@ -13,7 +13,7 @@ const photo2Style = computed(() => ({ zIndex: topPhoto.value === 2 ? 2 : 1 }))
 </script>
 
 <template>
-  <main id="main-content">
+  <main id="main-content" class="container">
     <div class="top-row">
       <section id="about" class="ingress-section">
         <h1>Jeg er Henrik, en UX-designer som også koder</h1>
@@ -50,9 +50,6 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .top-row {

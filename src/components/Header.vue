@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="container">
     <RouterLink :to="{ name: 'home' }" class="home-link-name">Henrik Oddløkken</RouterLink>
     <nav>
       <ul>
@@ -18,8 +18,6 @@ header {
   align-items: center;
   padding: 2rem;
   background-color: #fdf8ef;
-  max-width: 1024px;
-  margin: 0 auto;
 }
 
 .home-link-name {

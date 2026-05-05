@@ -1,6 +1,6 @@
 <template>
   <footer id="contact">
-    <div class="footer-inner">
+    <div class="footer-inner container">
       <h2>Kontakt</h2>
       <ul>
         <li>
@@ -23,10 +23,7 @@ footer {
 }
 
 .footer-inner {
-  max-width: 1024px;
-  margin: 0 auto;
   padding: 2rem 3rem 4rem;
-  box-sizing: border-box;
 }
 
 ul {
