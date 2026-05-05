@@ -16,10 +16,11 @@ const photo2Style = computed(() => ({ zIndex: topPhoto.value === 2 ? 2 : 1 }))
   <main id="main-content" class="container">
     <div class="top-row">
       <section id="about" class="ingress-section">
-        <h1>Jeg er Henrik, en UX-designer som også koder</h1>
+        <h1>Jeg er Henrik, frontend-utvikler med designblikk</h1>
         <p>
-          Jeg brenner for å lage løsninger som er gjennomtenkte og gir en god brukeropplevelse for
-          alle.
+          Master i interaksjonsdesign med fokus på universell utforming, bygget på bachelor i
+          webutvikling. Jobber best i skjæringspunktet mellom frontend og design hvor jeg ofte blir
+          en brobygger mellom disse to disiplinene.
         </p>
       </section>
       <section class="photos">

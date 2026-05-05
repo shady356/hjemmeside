@@ -1,7 +1,7 @@
 :root {
   --primary-text: #333;
   --secondary-text: #444;
-  --outline-color: #333;
+  --outline-color: #005bb6;
   --outline-offset: 4px;
 
   --btn-primary-bg: #005bb6;
@@ -11,8 +11,8 @@
   --btn-outline-bg-hover: #ddd;
   --btn-outline-border: #ccc;
 
-  --btn-icon-bg: rgba(255, 255, 255, 0.85);
-  --btn-icon-bg-hover: rgba(255, 255, 255, 1);
+  --btn-icon-bg: #fff;
+  --btn-icon-bg-hover: #f5f5f5;
 }
 
 .container {
