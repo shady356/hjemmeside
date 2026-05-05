@@ -8,7 +8,8 @@
       "Bash(gh pr *)",
       "Bash(git remote *)",
       "Bash(npm run *)",
-      "Bash(npx vue-tsc *)"
+      "Bash(npx vue-tsc *)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\henri\\\\Documents\\\\code\\\\Hjemmeside\\\\src\\\\\" -Recurse -Include \"*.vue\", \"*.ts\" | Select-Object FullName | Sort-Object FullName)"
     ]
   }
 }

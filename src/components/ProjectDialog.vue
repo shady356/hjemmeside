@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import type { BadgeIcon } from '@/types'
 import ExitIcon from './icons/ExitIcon.vue'
 import ArrowRight from './icons/ArrowRight.vue'
 import BaseButton from './BaseButton.vue'
@@ -21,7 +22,7 @@ defineProps<{
   to?: string
   primaryLabel?: string
   badge?: string
-  badgeIcon?: 'book' | 'mobile' | 'music'
+  badgeIcon?: BadgeIcon
 }>()
 
 const emit = defineEmits<{ close: [] }>()

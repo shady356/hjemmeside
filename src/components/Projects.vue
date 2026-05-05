@@ -5,21 +5,7 @@ import ProjectDialog from './ProjectDialog.vue'
 import abstractPianoArt from '@/assets/abstract_piano_art.svg'
 import pokeview from '@/assets/pokeview.svg'
 import fplEffect from '@/assets/fplEffect.svg'
-
-interface Project {
-  title: string
-  description: string
-  longDescription: string
-  color: string
-  foreground: string
-  image: string
-  githubUrl: string
-  websiteUrl?: string
-  dialogTo?: string
-  primaryLabel?: string
-  badge?: string
-  badgeIcon?: 'book' | 'mobile' | 'music'
-}
+import type { Project } from '@/types'
 
 const projects: Project[] = [
   {
